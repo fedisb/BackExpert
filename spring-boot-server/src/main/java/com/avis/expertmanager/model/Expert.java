@@ -17,6 +17,10 @@ public class Expert implements Serializable {
     @Column(nullable = false, updatable = false)
     private  String description;
 
+    private  String domaine;
+
+    private  String profileType;
+
     private String passwordHash;  // Store the hashed password
     private String salt;
 
@@ -31,6 +35,8 @@ public class Expert implements Serializable {
         this.phone = phone;
         this.imageUrl = imageUrl;
         this.description = description;
+        this.domaine = domaine ;
+        this.profileType = profileType;
     }
 
     public Expert(Long id) {
@@ -108,6 +114,22 @@ public class Expert implements Serializable {
         this.description = description;
     }
 
+    public String getDomaine() {
+        return domaine;
+    }
+
+    public void setDomaine(String domaine) {
+        this.domaine = domaine;
+    }
+
+    public String getProfileType() {
+        return profileType;
+    }
+
+    public void setProfileType(String profileType) {
+        this.profileType = profileType;
+    }
+
     @Override
     public String toString(){
         return "Expert{" +
@@ -117,6 +139,9 @@ public class Expert implements Serializable {
                 ", jobTitle='" + jobTitle + '\'' +
                 ", phone='" + phone + '\'' +
                 ", imageUrl='" + imageUrl + '\'' +
+                ", description='" +description + '\'' +
+                ", domaine='" +domaine + '\'' +
+                ", profileType='" +profileType + '\'' +
                 '}';
                    }
 }
