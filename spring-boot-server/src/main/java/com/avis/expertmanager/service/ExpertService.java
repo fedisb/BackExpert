@@ -72,7 +72,7 @@ public class ExpertService {
 
 
     public Expert addExpert(Expert expert) {
-        expert.setDescription(UUID.randomUUID().toString());
+        expert.setDescription();
         return expertRepo.save(expert);
     }
 

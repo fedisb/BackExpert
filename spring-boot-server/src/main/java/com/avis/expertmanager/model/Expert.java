@@ -14,7 +14,7 @@ public class Expert implements Serializable {
     private String jobTitle;
     private String phone;
     private  String imageUrl;
-    @Column(nullable = false, updatable = false)
+
     private  String description;
 
     private  String domaine;
@@ -110,7 +110,7 @@ public class Expert implements Serializable {
         return description;
     }
 
-    public void setDescription(String description) {
+    public void setDescription() {
         this.description = description;
     }
 
